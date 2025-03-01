@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Swimming</title>
+    <style>
+      body {
+        background: linear-gradient(
+          179.4deg,
+          rgb(253, 240, 233) 2.2%,
+          rgb(255, 194, 203) 96.2%
+        );
+        color: black;
+      }
+      h1 {
+        text-align: center;
+      }
+      h2 {
+        text-align: center;
+      }
+      img {
+        max-width: 100%;
+      }
+      p {
+        font-size: 18px;
+        line-height: 1.8;
+      }
+      .container {
+        max-width: 600px;
+        margin: 20px auto;
+        background: whitesmoke;
+        padding: 20px;
+        border-radius: 12px;
+      }
+      button {
+        display: block;
+        margin: 0 auto;
+        border: 1px solid blue;
+        font-size: 22px;
+        border-radius: 10px;
+        background: whitesmoke;
+        padding: 10px 15px;
+
+        transition: all 200ms ease-in-out;
+      }
+      button:hover {
+        background: pink;
+        cursor: pointer;
+      }
+      footer {
+        text-align: center;
+        margin: 8px o;
+        font-size: 20px;
+      }
+      .theme-button {
+        font-size: 12px;
+        background: grey;
+        color: whitesmoke;
+        padding: 8 10px;
+      }
+      .theme-button:hover {
+        background: whitesmoke;
+        color: grey;
+      }
+      .front-crawl {
+        border-radius: 10px;
+        transition: all 100ms ease-in-out;
+      }
+      .front-crawl:hover {
+        transform: scale(1.1);
+        filter: contrast(30%);
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 10px;
+        margin: 15px 0;
+      }
+
+      .grid img {
+        width: 100%;
+        border-radius: 6px;
+        aspect-ratio: 1/1;
+      }
+      .grid img:hover {
+        transform: scale(1.2);
+      }
+      .dark {
+        background: black;
+        color: whitesmoke;
+      }
+      .dark .container {
+        background: black;
+      }
+      .dark h1,
+      .dark h2,
+      .dark p {
+        color: whitesmoke;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="theme-button">Dark Theme</button>
+    <div class="container">
+      <h1>🏊‍♀️ Swimming</h1>
+      <h2>My favorite hobby</h2>
+      <a href="https://en.wikipedia.org/wiki/Swimming" target="_blank">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/155/415/original/front_crawl.jpeg?1737543496"
+          alt="front-crawl"
+          class="front-crawl"
+        />
+      </a>
+      <div class="grid">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/155/416/original/freestyle_swimming.jpg?1737543555"
+          alt="freestyle_swimming"
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/155/417/original/butterfly.jpg?1737543607"
+          alt="Butterfly swimming"
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/155/418/original/backstroke.jpg?1737543649"
+          alt="Backstroke swimming"
+        />
+      </div>
+      <p>
+        Swimming is the self-propulsion of a person through water or other
+        liquid, such as saltwater or freshwater environments, usually for
+        recreation, sport, exercise, or survival. Swimmers achieve locomotion by
+        coordinating limb and body movements to achieve hydrodynamic thrust that
+        results in directional motion. Newborns can instinctively hold their
+        breath underwater and exhibit rudimentary swimming movements as part of
+        a survival reflex. Swimming requires endurance, skill, and efficient
+        techniques to maximize speed and minimize energy consumption.
+      </p>
+      <button>🏊‍♀️Learn Swimming</button>
+    </div>
+    <footer>
+      Coded with 💙 by
+      <a href="https://www.shecodes.io/" target="_blank">Melloniah</a>
+    </footer>
+    <script>
+      function changeTheme() {
+        let body = document.querySelector("body");
+        body.classList.toggle("dark");
+      }
+      let themeButton = document.querySelector(".theme-button");
+      themeButton.addEventListener("click", changeTheme);
+    </script>
+  </body>
+</html>
